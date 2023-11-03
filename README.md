@@ -1,4 +1,4 @@
-# UrlShortener
+# Pathway
 Install all the dependecies using `npm install`.
 
 Start the server using - `npm start` 
