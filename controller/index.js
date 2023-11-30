@@ -2,6 +2,7 @@ const shortId = require('shortid')
 const URL  = require('../models/index.js'); 
 const { all } = require('../routes/staticRouter.js');
 
+
 async function generateShortURL(req ,res){
     const ogurl =  req.body.url 
     if(!ogurl) return res.status(400).json({err : 'no url passed'})
@@ -51,4 +52,9 @@ async function deleteUrl(req ,res){
     })
 
 }
-module.exports = {generateShortURL  , redirectURL , getAnalytics ,deleteUrl,getCreateTestPage }
+async function form(req,res)
+{
+    return res.render("https://docs.google.com/forms/d/e/1FAIpQLSfzokQdBcmZIlrXSwlkKi7RI22IrHwzMqEzW6xCjsiUplhfyA/viewform?usp=sf_link");
+}
+
+module.exports = {generateShortURL  , redirectURL , getAnalytics ,deleteUrl,getCreateTestPage ,form}

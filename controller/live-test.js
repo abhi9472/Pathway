@@ -4,7 +4,7 @@ const shuffleArray = require("./shuffle");
 async function startLiveTest(req, res) {
   if(!req.user) return res.redirect('/login')
 //   const body = req.body;
-  const author = "Abhishek";
+  const author = "Sem-5";
   const subject = "General";
 
   try {
